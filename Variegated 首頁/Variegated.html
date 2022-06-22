@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./reset.css">
+    <script src="https://kit.fontawesome.com/29cd5965f3.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            font-family: Helvetica, Arial, sans-serif, serif;
+        }
+
+        .header-group {
+            width: 100%;
+            margin: auto;
+            max-width: 1200px;
+        }
+
+        .header-top {
+            display: flex;
+            margin: 10px;
+            border-bottom: 0.5px solid rgb(223, 220, 220);
+        }
+
+        .top-contact,
+        .top-user {
+            width: 40%;
+            flex-grow: 1;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin: auto;
+        }
+
+        .top-contact a {
+            text-decoration: none;
+            border-right: 0.5px solid #aaa;
+        }
+
+        .top-contact a:hover {
+            color: pink;
+        }
+
+        .top-contact a,
+        p {
+            color: #aaa;
+            font-weight: lighter;
+            font-size: 14px;
+            text-align: center;
+            padding: 5px;
+        }
+
+        .top-contact span {
+            border-left: 0.5px solid #aaa;
+        }
+
+        .top-user {
+            margin: auto;
+            justify-content: space-evenly;
+        }
+
+        .user {
+            font-weight: lighter;
+            display: flex;
+            margin: auto;
+            padding: 10px;
+            text-align: center;
+            border-right: 0.5px solid #aaa;
+            flex-wrap: wrap;
+            align-items: center;
+            align-content: center;
+        }
+
+        .user:hover {
+            border-bottom: 2px solid pink;
+        }
+
+        input {
+            color: #aaa;
+            border-style: none;
+            width: 50%;
+        }
+
+        i {
+            padding: 0;
+            margin: 0;
+        }
+
+        .header-bottom,
+        menu,
+        .bottom-icon {
+            display: flex;
+            width: 30%;
+            flex-grow: 1;
+        }
+
+        ul {
+            display: flex;
+        }
+
+        ul li {
+            display: flex;
+            margin: 10px;
+        }
+
+        ul li a {
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="header-group">
+        <div class="header-top">
+            <div class="top-contact">
+                <p>Call us:</p>
+                <a href="tel:+3(800) 2345-6789">+3(800) 2345-6789</a>
+                <p>7 Days a week from 9:00 am to 7:00 pm</p>
+
+            </div>
+
+            <div class="top-user">
+                <div class="user">
+                    <p>USD,</p>
+                    <i class="fa-solid fa-dollar-sign"></i>
+                    <i class="fa-solid fa-angle-down"></i>
+                </div>
+                <div class="user">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+                <div class="user">
+                    <p>Login</p>
+                </div>
+                <div class="user">
+                    <input type="Search" value="Search...">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-bottom">
+            <div class="bottom-logo">
+                <img src="./img/logo.webp" alt="Logo img">
+            </div>
+            <div class="bottom-nav">
+                <nav class="menu">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">ABOUT</a></li>
+                        <li><a href="#">FEATURES<i class="fa-solid fa-angle-down"></i></a></li>
+                        <li><a href="#">BLOG<i class="fa-solid fa-angle-down"></i></a></li>
+                        <li><a href="#">SHOP</a></li>
+                        <li><a href="#">CONTACTS</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="bottom-icon">
+                <div class="icon-fb"><i class="fa-brands fa-facebook-f"></i></div>
+                <div class="icon-ig"><i class="fa-brands fa-instagram"></i></div>
+                <div class="icon-google"><i class="fa-brands fa-google"></i></div>
+                <div class="icon-twitter"><i class="fa-brands fa-twitter"></i></div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
