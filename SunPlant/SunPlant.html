@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./grid.css">
+    <script src="https://kit.fontawesome.com/29cd5965f3.js" crossorigin="anonymous"></script>
+    <style>
+        :root {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .header-list {
+            width: 100%;
+            display: flex;
+            position: sticky;
+            justify-content: center;
+            top: 0;
+            padding: 30px;
+            box-sizing: border-box;
+            align-items: center;
+            position: relative;
+
+        }
+
+        /* .phone-nav{
+
+        }         */
+        .table-nav {
+            position: absolute;
+            left: 20px;
+        }
+
+        /* #menu-switch{
+            position: absolute;
+        }
+        .phone-nav {
+            position: absolute;
+            height: 100vh;
+            background-color: aquamarine;
+            width: 80%;
+        }
+
+        .phone-nav a {
+            text-decoration: none;
+            font-size: 20px;
+            display: block;
+            padding:25px;
+            align-items: center;
+        }
+
+        .hb-list {
+            display: flex;
+        }
+
+        .hb-menu {
+            width: 50%;
+            display: flex;
+            background-color: black;
+            color: white;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .hb-login {
+            width: 50%;
+            display: flex;
+            background-color: aqua;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+        .hb-login i{
+            margin-right: 10px;
+        }
+
+        .hb-icon {
+            width: 40px;
+            height: 40px;
+            position: relative;
+        }
+
+        .hb-icon span {
+            height: 2px;
+            width: 70%;
+            background-color: #fff;
+            position: absolute;
+            left: 10%;
+        }
+
+        .hb-icon span:nth-child(1) {
+            top: 10px;
+        }
+
+        .hb-icon span:nth-child(2) {
+            width: 50%;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            opacity: 1;
+        }
+
+        .hb-icon span:nth-child(3) {
+            bottom: 10px;
+        }
+        
+        .table-nav {
+            display: none;
+        }
+
+        .phone-list {
+            
+        }
+        .phone-list a{
+            display: flex;
+        }
+        .phone-list a i{
+            margin-right: 65%;
+            position: absolute;
+            right: -150px;
+        }
+        .phone-close{
+            height: 5%;
+            color:white;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            background-color: rgb(20, 148, 47);
+        }
+        .phone-close i{
+            margin-right: 5px;
+        } */
+
+        .table-nav a {
+            text-decoration: none;
+            margin-right: 35px;
+            color: black;
+        }
+
+        .table-nav a:nth-child(5) {
+            margin-right: 190px;
+        }
+
+        .logo {
+            width: 160px;
+        }
+
+        .logo img {
+            width: 100%;
+        }
+
+        .header-icon {
+            display: flex;
+            position: absolute;
+            right: 0;
+            font-size: 23px;
+            padding: 10px;
+        }
+
+        .header-icon i {
+            margin-right: 15px;
+        }
+
+        .header-icon i:nth-child(2) {
+            display: none;
+        }
+
+        .header-icon span {
+            padding: 5px 0;
+            /* line-height: 2; */
+            display: block;
+            font-size: 14px;
+            position: absolute;
+            top: -10px;
+            ;
+            right: 35px;
+        }
+
+        .title-img {
+            background-image: url("./img/bg-slide10.webp");
+            padding: 40px 60px;
+        }
+
+        .title-img img {
+            width: 100%;
+        }
+
+        .img-container {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .img-container .img-price {
+            position: absolute;
+        }
+
+        .img-container .img-price p {
+            font-size: 35px;
+            line-height: 1.5;
+        }
+
+        .img-container .img-price p+p {
+            font-size: 20px;
+            padding-bottom: 20px;
+        }
+
+        .title-img .img-btn {
+            display: inline-block;
+            color: white;
+            background-color: black;
+            padding: 15px 50px;
+            border-radius: 3px;
+        }
+
+        .title-img .img-btn:hover {
+            background-color: #2DBBF0;
+        }
+
+        .title-img .img-btn p {
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+
+        .title-container .title-h2 {
+            font-size: 28px;
+            text-align: center;
+            font-weight: 600;
+            color: #618432;
+            line-height: 1.5;
+            padding: 50px 10px;
+        }
+
+        .title-container .first-p {
+            text-align: center;
+            font-style: italic;
+            color: #BFBCC1;
+        }
+
+        .title-container p {
+            color: #BFBCC1;
+        }
+
+        /* .title-space-txt {
+            margin: 30px;
+        } */
+
+        .title-space-txt .txt {
+            padding: 15px 10px;
+        }
+
+        .title-space-txt h3 {
+            font-size: 23px;
+            font-weight: 600;
+            color: #444445;
+            padding: 10px 0;
+        }
+
+        .title-space-pic {
+            display: flex;
+            justify-content: center;
+            padding: 0 10px;
+        }
+
+        .title-space-pic img {}
+
+        .main-container {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .container .main-h2 {
+            padding: 70px 0;
+            text-align: center;
+            font-size: 26px;
+            font-weight: 600;
+            color: #618432;
+        }
+
+        .item .item-pic img {
+            width: 100%;
+        }
+
+        .item .item-title {
+            text-align: center;
+            padding: 20px 0;
+            font-weight: 600;
+        }
+
+        .item .item-price {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 25px;
+        }
+
+        .item .item-price p {
+            padding-right: 5px;
+            font-weight: 600;
+        }
+
+        .bottom-container {
+            background-image: url(https://cdn.shopify.com/s/files/1/0356/8343/4555/files/bg-video1.jpg?v=1585532362);
+            padding: 15px;
+        }
+
+        .bottom-txt {
+            padding-top: 100px;
+        }
+
+        .bottom-container h3 {
+            padding-bottom: 15px;
+            font-size: 24px;
+            font-weight: 600;
+            color: #618432;
+        }
+
+        .bottom-container p {
+            padding-bottom: 15px;
+            line-height: 1.5;
+            font-size: 16px;
+
+        }
+
+        .bottom-container .shop p {
+            display: inline-block;
+            border: 1px solid black;
+            padding: 10px 50px;
+            font-size: 14px;
+        }
+
+        @media screen and (max-width: 767px) {
+            .table-nav {
+                display: none;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            /* .phone-nav {
+                display: none;
+            } */
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header-list">
+        <!-- <input type="checkbox" name="" id="hb-switch">
+        <label for="hb-switch" class="hb">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <nav class="phone-nav">
+            <div class="box"></div>
+            <div class="hb-list">
+                <div class="hb-menu">
+                    <div class="hb-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <p>MENU</p>
+                </div>
+                <div class="hb-login">
+                    <i class="fa-solid fa-circle-user"></i>
+                    <p>LOGIN</p>
+                </div>
+            </div>
+            <div class="phone-list">
+                <a href="#"><p>Home</p> <i class="fa-solid fa-angle-right"></i></a>
+                <a href="#"><p>Shop</p><i class="fa-solid fa-angle-right"></i></a>
+                <a href="#"><p>Featured</p><i class="fa-solid fa-angle-right"></i></a>
+                <a href="#"><p>Pages</p><i class="fa-solid fa-angle-right"></i></a>
+                <a href="#"><p>Element</p><i class="fa-solid fa-angle-right"></i></a>
+            </div>
+            <div class="phone-close">
+                <i class="fa-solid fa-xmark"></i>
+                <p>CLOSE</p>
+            </div>
+
+        </nav> -->
+        <!-- <nav class="phone-nav">
+            <i class="fa-solid fa-bars"></i>
+        </nav> -->
+        <nav class="table-nav">
+            <a href="#">Home</a>
+            <a href="#">Shop</a>
+            <a href="#">Featured</a>
+            <a href="#">Pages</a>
+            <a href="#">Element</a>
+        </nav>
+
+        <div class="logo">
+            <img src="./img/logo.webp" alt="logo">
+        </div>
+
+        <div class="header-icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-circle-user"></i>
+            <i class="fa-solid fa-basket-shopping"></i>
+            <span>0</span>
+        </div>
+    </header>
+    <section class="title-img">
+        <section class="img-container">
+            <div class="img-price">
+                <div class="img-txt">
+                    <p>Collection New <br>Beautiful</p>
+                    <p>from $69</p>
+                </div>
+
+                <div class="img-btn">
+                    <p>SHOP NOW</p>
+                </div>
+            </div>
+
+            <div class="img-pic">
+                <img src="./img/slidesho10-small-1.webp" alt="首頁圖">
+            </div>
+        </section>
+    </section>
+    <section class="title-container">
+        <h2 class="title-h2">
+            The important benefits of<br> greenery for the environment and health
+        </h2>
+
+        <p class="first-p">Trees have always been considered as "lungs" of the earth. Planting lots of trees helps
+            provide a great deal of oxygen for us to breathe.</p>
+        <p class="first-p">On average, one tree can provide enough oxygen for four people. At the same time they also
+            absorb C02, ammonia, S02, .. in the world!</p>
+
+        <div class="row">
+            <div class="col-12 col-md-4 title-space-txt">
+                <div class="txt">
+                    <h3>Reducing environmental pollution</h3>
+                    <p>Trees have always been considered as "lungs" of the earth.</p>
+                </div>
+                <div class="txt">
+                    <h3>Save water and reduce soil erosion</h3>
+                    <p>Trees can slow down the evaporation of water, increasing air humidity.</p>
+                </div>
+                <div class="txt">
+                    <h3>Reduce street temperatures</h3>
+                    <p>Planting more trees in densely populated areas will not only make the air there more fresh</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 title-space-pic">
+                <img src="./img/info-v3.webp" alt="植物圖">
+            </div>
+            <div class="col-12 col-md-4 title-space-txt">
+                <div class="txt">
+                    <h3>Energy conservation</h3>
+                    <p>One tree can cool down, cool down 10 rooms</p>
+                </div>
+                <div class="txt">
+                    <h3>Prevent ultraviolet influence</h3>
+                    <p>Green trees become shade to block the sunlight from the road</p>
+                </div>
+                <div class="txt">
+                    <h3>Improve human health</h3>
+                    <p>Living in a quiet, cool, clean and fresh environment will make your health better</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <main class="container">
+        <h2 class="main-h2">Staff.Pick</h2>
+
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+            <div class="col">
+                <div class="item">
+
+                    <div class="item-pic">
+                        <img src="./img/container/1.webp" alt="植物圖1">
+                        <div class="box"></div>
+                    </div>
+                    <div class="item-title">
+                        <h3>Sapien Libero</h3>
+                    </div>
+                    <div class="item-price">
+                        <p>$150.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="item">
+
+                    <div class="item-pic">
+                        <img src="./img/container/2.webp" alt="植物圖2">
+                        <div class="box"></div>
+                    </div>
+                    <div class="item-title">
+                        <h3>Fringilla Augue 360</h3>
+                    </div>
+                    <div class="item-price">
+                        <p>$200.00</p>
+                        <p>$150.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="item">
+
+                    <div class="item-pic">
+                        <img src="./img/container/3.webp" alt="植物圖3">
+                        <div class="box"></div>
+                    </div>
+                    <div class="item-title">
+                        <h3>Faded Short Sleeves Variable</h3>
+                    </div>
+                    <div class="item-price">
+                        <p>$200.00</p>
+                        <p>$150.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="item">
+
+                    <div class="item-pic">
+                        <img src="./img/container/4.jpg" alt="植物圖4">
+                        <div class="box"></div>
+                    </div>
+                    <div class="item-title">
+                        <h3>Purple Flowers</h3>
+                    </div>
+                    <div class="item-price">
+                        <p>$180.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="item">
+
+                    <div class="item-pic">
+                        <img src="./img/container/5.webp" alt="植物圖5">
+                        <div class="box"></div>
+                    </div>
+                    <div class="item-title">
+                        <h3>Adipiscing Cursus Out Of Stock</h3>
+                    </div>
+                    <div class="item-price">
+                        <p>$450.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="item">
+
+                    <div class="item-pic">
+                        <img src="./img/container/6.webp" alt="植物圖6">
+                        <div class="box"></div>
+                    </div>
+                    <div class="item-title">
+                        <h3>Fringilla Augue</h3>
+                    </div>
+                    <div class="item-price">
+                        <p>$320.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="item">
+
+                    <div class="item-pic">
+                        <img src="./img/container/7.webp" alt="植物圖7">
+                        <div class="box"></div>
+                    </div>
+                    <div class="item-title">
+                        <h3>Purple Flowers</h3>
+                    </div>
+                    <div class="item-price">
+                        <p>$200.00</p>
+                        <p>$150.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="item">
+
+                    <div class="item-pic">
+                        <img src="./img/container/1.webp" alt="植物圖8">
+                        <div class="box"></div>
+                    </div>
+                    <div class="item-title">
+                        <h3>Plant</h3>
+                    </div>
+                    <div class="item-price">
+                        <p>$200.00</p>
+                        <p>$150.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="item">
+
+                    <div class="item-pic">
+                        <img src="./img/container/9.webp" alt="植物圖9">
+                        <div class="box"></div>
+                    </div>
+                    <div class="item-title">
+                        <h3>Plant Beautiful</h3>
+                    </div>
+                    <div class="item-price">
+                        <p>$150.00</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <section class="bottom-container">
+        <div class="bottom-txt">
+            <h3>A Number Of Our Products</h3>
+            <p>Pick up all you need to keep your board in optimum condition with Decathlon’s set of surfboard
+                accessories.</p>
+        </div>
+
+        <div class="shop">
+            <p>SHOP NOW</p>
+        </div>
+        <div class="bottom-pic">
+            <img src="./img/container/youtube-plant.webp" alt="影片圖">
+        </div>
+    </section>
+
+</body>
+
+</html>

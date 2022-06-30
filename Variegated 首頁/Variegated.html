@@ -22,7 +22,7 @@
 
         .header-top {
             display: flex;
-            margin: 10px;
+            margin: 5px;
             border-bottom: 0.5px solid rgb(223, 220, 220);
         }
 
@@ -37,7 +37,12 @@
         }
 
         .top-contact a {
+            color: #aaa;
+            font-weight: lighter;
+            font-size: 14px;
             text-decoration: none;
+            text-align: center;
+            padding-right: 10px;
             border-right: 0.5px solid #aaa;
         }
 
@@ -45,13 +50,12 @@
             color: pink;
         }
 
-        .top-contact a,
         p {
             color: #aaa;
             font-weight: lighter;
             font-size: 14px;
             text-align: center;
-            padding: 5px;
+            padding: 10px;
         }
 
         .top-contact span {
@@ -61,6 +65,7 @@
         .top-user {
             margin: auto;
             justify-content: space-evenly;
+
         }
 
         .user {
@@ -69,7 +74,7 @@
             margin: auto;
             padding: 10px;
             text-align: center;
-            border-right: 0.5px solid #aaa;
+
             flex-wrap: wrap;
             align-items: center;
             align-content: center;
@@ -79,6 +84,10 @@
             border-bottom: 2px solid pink;
         }
 
+        .user i {
+            border-right: 0.5px solid #aaa;
+        }
+
         input {
             color: #aaa;
             border-style: none;
@@ -86,30 +95,44 @@
         }
 
         i {
-            padding: 0;
-            margin: 0;
+            margin: 10px;
+            text-align: center;
+            padding-right: 10px;
         }
 
-        .header-bottom,
-        menu,
+        .header-bottom {
+            display: flex;
+        }
+
+        .menu {
+            display: flex;
+        }
+
         .bottom-icon {
             display: flex;
             width: 30%;
-            flex-grow: 1;
+            align-items: center;
+
+        }
+
+        .header-bottom {
+            justify-content: space-around;
         }
 
         ul {
             display: flex;
+
         }
 
         ul li {
-            display: flex;
             margin: 10px;
         }
 
         ul li a {
+            display: flex;
             text-decoration: none;
             font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
         }
     </style>
 </head>

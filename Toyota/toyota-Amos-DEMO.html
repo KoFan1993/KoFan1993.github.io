@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .wrap{
+            max-width: 960px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .item{
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+        .item .A{
+            width: 33.333333%;
+            background-color: #f00;
+            color: #fff;
+            position: relative;
+            z-index: 3;
+        }
+        .item:nth-child(even) .A{
+            margin-left: auto;
+        }
+        .item .A h2{
+            font-size: 42px;
+        }
+        .item .A .A_txt{
+            background-color: #000;
+            position: absolute;
+        }
+        .item .B{
+            width: 66.666666%;
+            margin-left: 20%;
+            margin-bottom: -2em;
+            position: relative;
+        }
+        .item:nth-child(even) .B{
+            margin-left: 10%;
+        }
+        .item .B:after{
+            content: '';
+            width: 300px;
+            height: 200px;
+            background-color: #ccc;
+            position: absolute;
+            top: -40px;
+            right: -30px;
+        }
+        .item .B a{
+            display: flex;
+            flex-wrap: wrap;
+            /* outline: 1px solid blue; */
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        .item:nth-child(even) .B a{
+            flex-direction: row-reverse;
+        }
+        .item .B .big-pic{
+            width: 96.875%;
+            margin-right: -6.25%;
+        }
+        .item:nth-child(even) .B .big-pic{
+            margin-left: -6.25%;
+            margin-right: auto;
+        }
+        .item .B .small-pic{
+            width: 9.375%;
+        }
+        .item .C{
+            width: 66.666666%;
+            margin-left: 10%;
+            background-color: #aaa;
+            position: relative;
+            z-index: 5;
+            display: flex;
+            flex-direction: column;
+        }
+        .item:nth-child(even) .C{
+            margin-left: 20%;
+        }
+        .item h3{
+            background-color: #000;
+            color: #fff;
+            align-self: flex-start;
+        }
+        .item .slg{
+            color: red;
+            display: flex;
+            align-items: center;
+            order: -1;
+        }
+        .item .slg:after{
+            content: '';
+            /* width: 0; */
+            height: 1px;
+            background-color: #f00;
+            margin-left: 10px;
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="wrap">
+        <section class="item">
+            <div class="A">
+                <h2>1 title</h2>
+                <div class="A_txt">
+                    <h3>title</h3>
+                    <p>是不是意外，無線全新寂寞諮詢活動求助春天農村忽然年度要是隨時望着能否特色有點遠道路出現在種子職務，獎勵市委，宣佈各自信。</p>
+                </div>
+            </div>
+            <div class="B">
+                <a href="#">
+                    <img src="https://fakeimg.pl/300x200/fa0" class="big-pic">
+                    <img src="https://fakeimg.pl/60x30/f00" class="small-pic">
+                </a>
+            </div>
+            <div class="C">
+                <h3>主動安全</h3>
+                <p>以先進的TSS系統，主動偵測路況,輔駕駛判斷路況並維持行車安全。</p>
+                <h3>被動安全</h3>
+                <p>堅固的高剛性車體，使用的高剛性車體，使用的高剛性車體，使用的高剛性車體，使用的高剛性車體，使用的高剛性車體，使用的高剛性車體，使用的高剛性車體，使用的高剛性車體，使用熱沖壓材料的高強度抗扭鋼板，強化座艙對意外事故的保護力。</p>
+                <span class="slg">因為我們做了這些革新</span>
+            </div>
+        </section>
+        <section class="item">
+            <div class="A">
+                <h2>2 title</h2>
+                <div class="A_txt">
+                    <h3>title</h3>
+                    <p>是不是意外，無線全新寂寞諮詢活動求助春天農村忽然年度要是隨時房屋，上門擴大運動也沒專門考察變成速度在此，主機五金我看活力危險，重新天下多媒體專家缺乏考察線路包含恐怖歐美，天下如此還能，立刻形成晶片望着能否特色有點遠道路出現在種子職務，獎勵市委，宣佈各自信。</p>
+                </div>
+            </div>
+            <div class="B">
+                <a href="#">
+                    <img src="https://fakeimg.pl/300x200/fa0" class="big-pic">
+                    <img src="https://fakeimg.pl/60x30/f00" class="small-pic">
+                </a>
+            </div>
+            <div class="C">
+                <h3>主動安全</h3>
+                <p>以先進的TSS系統，主動偵測路況,輔駕駛判斷路況並維持行車安全。</p>
+                <h3>被動安全</h3>
+                <p>堅固的高剛性車體，使用熱沖壓材料的高強度抗扭鋼板，強化座艙對意外事故的保護力。</p>
+                <span class="slg">因為我們做了這些革新</span>
+            </div>
+        </section>
+        <section class="item">
+            <div class="A">
+                <h2>3 title</h2>
+                <div class="A_txt">
+                    <h3>title</h3>
+                    <p>是不是意外，無線全新寂寞諮詢活動求助春天農村忽然年度要是隨時房屋，上門擴大運動也沒專門考察變成速度在此，主機五金我看活力危險，重新天下多媒體專家缺乏考察線路包含恐怖歐美，天下如此還能，立刻形成晶片望着能否特色有點遠道路出現在種子職務，獎勵市委，宣佈各自信。</p>
+                </div>
+            </div>
+            <div class="B">
+                <a href="#">
+                    <img src="https://fakeimg.pl/300x200/fa0" class="big-pic">
+                    <img src="https://fakeimg.pl/60x30/f00" class="small-pic">
+                </a>
+            </div>
+            <div class="C">
+                <h3>主動安全</h3>
+                <p>以先進的TSS系統，主動偵測路況,輔駕駛判斷路況並維持行車安全。</p>
+                <h3>被動安全</h3>
+                <p>堅固的高剛性車體，使用熱沖壓材料的高強度抗扭鋼板，強化座艙對意外事故的保護力。</p>
+                <span class="slg">因為我們做了這些革新</span>
+            </div>
+        </section>
+        <section class="item">
+            <div class="A">
+                <h2>4 title</h2>
+                <div class="A_txt">
+                    <h3>title</h3>
+                    <p>是不是意外，無線全新寂寞諮詢活動求助春天農村忽然年度要是隨時房屋，上門擴大運動也沒專門考察變成速度在此，主機五金我看活力危險，重新天下多媒體專家缺乏考察線路包含恐怖歐美，天下如此還能，立刻形成晶片望着能否特色有點遠道路出現在種子職務，獎勵市委，宣佈各自信。</p>
+                </div>
+            </div>
+            <div class="B">
+                <a href="#">
+                    <img src="https://fakeimg.pl/300x200/fa0" class="big-pic">
+                    <img src="https://fakeimg.pl/60x30/f00" class="small-pic">
+                </a>
+            </div>
+            <div class="C">
+                <h3>主動安全</h3>
+                <p>以先進的TSS系統，主動偵測路況,輔駕駛判斷路況並維持行車安全。</p>
+                <h3>被動安全</h3>
+                <p>堅固的高剛性車體，使用熱沖壓材料的高強度抗扭鋼板，強化座艙對意外事故的保護力。</p>
+                <span class="slg">因為我們做了這些革新</span>
+            </div>
+        </section>
+        <section class="item">
+            <div class="A">
+                <h2>5 title</h2>
+                <div class="A_txt">
+                    <h3>title</h3>
+                    <p>是不是意外，無線全新寂寞諮詢活動求助春天農村忽然年度要是隨時房屋，上門擴大運動也沒專門考察變成速度在此，主機五金我看活力危險，重新天下多媒體專家缺乏考察線路包含恐怖歐美，天下如此還能，立刻形成晶片望着能否特色有點遠道路出現在種子職務，獎勵市委，宣佈各自信。</p>
+                </div>
+            </div>
+            <div class="B">
+                <a href="#">
+                    <img src="https://fakeimg.pl/300x200/fa0" class="big-pic">
+                    <img src="https://fakeimg.pl/60x30/f00" class="small-pic">
+                </a>
+            </div>
+            <div class="C">
+                <h3>主動安全</h3>
+                <p>以先進的TSS系統，主動偵測路況,輔駕駛判斷路況並維持行車安全。</p>
+                <h3>被動安全</h3>
+                <p>堅固的高剛性車體，使用熱沖壓材料的高強度抗扭鋼板，強化座艙對意外事故的保護力。</p>
+                <span class="slg">因為我們做了這些革新</span>
+            </div>
+        </section>
+    </div>
+
+
+    
+</body>
+</html>

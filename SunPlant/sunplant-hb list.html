@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #menu-switch{
+            position: absolute;
+        }
+        .phone-nav {
+            position: absolute;
+            height: 100vh;
+            background-color: aquamarine;
+            width: 80%;
+        }
+
+        .phone-nav a {
+            text-decoration: none;
+            font-size: 20px;
+            display: block;
+            padding:25px;
+            align-items: center;
+            /* margin-right: 50px; */
+        }
+
+        .hb-list {
+            display: flex;
+        }
+
+        .hb-menu {
+            width: 50%;
+            display: flex;
+            background-color: black;
+            color: white;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .hb-login {
+            width: 50%;
+            display: flex;
+            background-color: aqua;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+        .hb-login i{
+            margin-right: 10px;
+        }
+
+        .hb-icon {
+            width: 40px;
+            height: 40px;
+            position: relative;
+        }
+
+        .hb-icon span {
+            height: 2px;
+            width: 70%;
+            background-color: #fff;
+            position: absolute;
+            left: 10%;
+        }
+
+        .hb-icon span:nth-child(1) {
+            top: 10px;
+        }
+
+        .hb-icon span:nth-child(2) {
+            width: 50%;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            opacity: 1;
+        }
+
+        .hb-icon span:nth-child(3) {
+            bottom: 10px;
+        }
+        
+        .table-nav {
+            display: none;
+        }
+
+        .phone-list {
+            
+        }
+        .phone-list a{
+            display: flex;
+        }
+        .phone-list a i{
+            margin-right: 65%;
+            position: absolute;
+            right: -150px;
+        }
+        .phone-close{
+            height: 5%;
+            color:white;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            background-color: rgb(20, 148, 47);
+        }
+        .phone-close i{
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <input type="checkbox" name="" id="hb-switch">
+        <label for="hb-switch" class="hb">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <nav class="phone-nav">
+            <div class="box"></div>
+            <div class="hb-list">
+                <div class="hb-menu">
+                    <div class="hb-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <p>MENU</p>
+                </div>
+                <div class="hb-login">
+                    <i class="fa-solid fa-circle-user"></i>
+                    <p>LOGIN</p>
+                </div>
+            </div>
+            <div class="phone-list">
+                <a href="#"><p>Home</p> <i class="fa-solid fa-angle-right"></i></a>
+                <a href="#"><p>Shop</p><i class="fa-solid fa-angle-right"></i></a>
+                <a href="#"><p>Featured</p><i class="fa-solid fa-angle-right"></i></a>
+                <a href="#"><p>Pages</p><i class="fa-solid fa-angle-right"></i></a>
+                <a href="#"><p>Element</p><i class="fa-solid fa-angle-right"></i></a>
+            </div>
+            <div class="phone-close">
+                <i class="fa-solid fa-xmark"></i>
+                <p>CLOSE</p>
+            </div>
+
+        </nav>
+        <nav class="table-nav">
+            <a href="#">Home</a>
+            <a href="#">Shop</a>
+            <a href="#">Featured</a>
+            <a href="#">Pages</a>
+            <a href="#">Element</a>
+        </nav>
+
+        <div class="logo">
+            <img src="./img/logo.webp" alt="logo">
+        </div>
+
+        <div class="header-icon">
+
+        </div>
+
+    </header>
+    
+</body>
+</html>
