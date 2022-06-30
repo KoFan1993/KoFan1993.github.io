@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .group {
+            margin: auto;
+            width: 500px;
+        }
+
+        .img {
+            border: 2px solid #aaa;
+            display: flex;
+            justify-content: center;
+            margin: 10px;
+        }
+
+        .info {
+            border: 2px solid #aaa;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .item-img {
+            border: 2px solid #aaa;
+            margin: 10px;
+            padding: 10px;
+            display: flex;
+        }
+
+        .item img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="group">
+        <div class="img">
+            <img src="" alt="">
+        </div>
+        <div class="info">
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+        <div class="item-img">
+            <div class="item">
+                <img src="" alt="">
+            </div>
+
+            <div class="item">
+                <img src="" alt="">
+            </div>
+
+            <div class="item">
+                <img src="" alt="">
+            </div>
+
+        </div>
+    </div>
+
+
+    <script>
+        let name = "A夢";
+        let age = 100;
+        let girlfriend = "小咪";
+
+        const DoUrl = "https://www.dora-world.com.tw/dist/images/character_1.png";
+
+        // const MiUrl = "https://www.dora-world.com.tw/dist/images/character_2.png";
+        // const shiUrl = "https://www.dora-world.com.tw/dist/images/character_4.png";
+        // const NoUrl = "https://www.dora-world.com.tw/dist/images/character_3.png";
+
+        let img = document.querySelector("img");
+        img.setAttribute("src", DoUrl);
+
+        let info1 = document.querySelector(".info p:nth-child(1)");
+        info1.innerHTML = `姓名: ${name}`;
+
+        let info2 = document.querySelector(".info p:nth-child(2)");
+        info2.innerHTML = `年齡: ${age}`;
+
+        let info3 = document.querySelector(".info p:nth-child(3)");
+        info3.innerHTML = `女朋友: ${girlfriend}`;
+
+
+
+        // let pic1 = document.querySelector(".item-img .item:nth-child(1) img");
+        // // pic1.src = MiUrl;
+
+        // let pic2 = document.querySelector(".item-img .item:nth-child(2) img");
+        // // pic2.src = shiUrl;
+
+        // let pic3 = document.querySelector(".item-img .item:nth-child(3) img");
+        // pic3.src = NoUrl;
+
+
+        const picArray = [
+            "https://www.dora-world.com.tw/dist/images/character_2.png",
+            "https://www.dora-world.com.tw/dist/images/character_4.png",
+            "https://www.dora-world.com.tw/dist/images/character_3.png"
+        ];
+
+        picArray.forEach((item, index) => {
+            let pic = document.querySelector(`.item-img .item:nth-child(${index + 1}) img`);
+            pic.src = item;
+            // document.write(`<img src="${item}" alt="">`);
+
+        });
+
+    </script>
+
+</body>
+
+</html>
