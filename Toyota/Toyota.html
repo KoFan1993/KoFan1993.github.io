@@ -29,12 +29,15 @@
             background-color: rgb(187, 18, 18);
             color: white;
             padding: 20px 10px;
+            display: flex;
+            align-items: center;
         }
 
         .title-number {
             font-size: 80px;
             font-weight: 300;
             display: inline-block;
+            writing-mode: vertical-lr;
         }
 
         .title-h3 {
@@ -146,13 +149,32 @@
             .txt {
                 width: 40%;
                 position: absolute;
-                z-index: 1;
+                z-index: 2;
                 left: -180px;
                 top: -120px;
             }
 
+            /* .txt:nth-child(even) {
+                flex-direction: row-reverse;
+            } */
+
             .pic {
                 width: 80%;
+            }
+
+            .pic::after {
+                content: '';
+                width: 400px;
+                height: 250px;
+                background-color: #EEEEEE;
+                position: absolute;
+                top: -60px;
+                right: -80px;
+            }
+
+            .pic img {
+                position: relative;
+                z-index: 1;
             }
 
             .info {
@@ -162,6 +184,7 @@
                 /* right: -50px; */
                 bottom: -130px;
                 left: -200px;
+                z-index: 2;
             }
 
             .info span {

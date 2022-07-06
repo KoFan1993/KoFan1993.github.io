@@ -27,9 +27,6 @@
 
         }
 
-        /* .phone-nav{
-
-        }         */
         .table-nav {
             position: absolute;
             left: 20px;
@@ -274,8 +271,6 @@
             padding: 0 10px;
         }
 
-        .title-space-pic img {}
-
         .main-container {
             padding-left: 15px;
             padding-right: 15px;
@@ -312,11 +307,7 @@
 
         .bottom-container {
             background-image: url(https://cdn.shopify.com/s/files/1/0356/8343/4555/files/bg-video1.jpg?v=1585532362);
-            padding: 15px;
-        }
-
-        .bottom-txt {
-            padding-top: 100px;
+            padding: 100px 15px;
         }
 
         .bottom-container h3 {
@@ -338,6 +329,30 @@
             border: 1px solid black;
             padding: 10px 50px;
             font-size: 14px;
+        }
+
+        .bottom-pic img {
+            width: 100%;
+        }
+
+        .section-instagram .ig {
+            padding-top: 100px;
+            padding-bottom: 50px;
+            display: flex;
+            background-color: #BFBCC1;
+            justify-content: center;
+
+        }
+
+        .section-instagram .pic {
+            width: 100%;
+            display: flex;
+            box-sizing: border-box;
+        }
+
+        .pic img {
+            width: 100%;
+            margin: 15px;
         }
 
         @media screen and (max-width: 767px) {
@@ -404,9 +419,9 @@
             <a href="#">Element</a>
         </nav>
 
-        <div class="logo">
-            <img src="./img/logo.webp" alt="logo">
-        </div>
+        <a class="logo">
+            <h1><img src="./img/logo.webp" alt="logo"></h1>
+        </a>
 
         <div class="header-icon">
             <i class="fa-solid fa-magnifying-glass"></i>
@@ -638,9 +653,39 @@
             <p>SHOP NOW</p>
         </div>
         <div class="bottom-pic">
-            <img src="./img/container/youtube-plant.webp" alt="影片圖">
+            <img src="./img/youtube-plant.webp" alt="影片圖">
         </div>
     </section>
+
+    <section class="section section-instagram">
+        <div class="ig">
+            <i class="fa-brands fa-instagram"></i>
+            <p>SHOP INSTAGRAM</p>
+        </div>
+        <div class="pic">
+            <img src="./img/instagram1.webp" alt="ig圖1">
+            <img src="./img/instagram2.webp" alt="ig圖2">
+        </div>
+    </section>
+
+    <footer>
+        <div class="logo">
+
+        </div>
+        <div class="info">
+            <span class="about"></span>
+            <span class="service"></span>
+            <span class="sub"></span>
+        </div>
+        <div class="icon">
+            <div class="twitter"></div>
+            <div class="gol"></div>
+            <div class="be"></div>
+            <div class="ig"></div>
+        </div>
+
+
+    </footer>
 
 </body>
 
