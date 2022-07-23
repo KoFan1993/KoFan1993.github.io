@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple</title>
+
+    <!-- reset -->
+    <link rel="stylesheet" href="./reset.css">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/29cd5965f3.js" crossorigin="anonymous"></script>
+
+    <style>
+        /* 清除bootstrap */
+        .btn:focus,
+        .btn:active:focus,
+        .btn.active:focus,
+        .btn.focus,
+        .btn:active.focus,
+        .btn.active.focus,
+        button:focus {
+            outline: none !important;
+            box-shadow: none !important;
+        }
+
+        [selected="true"]::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            border: 2px solid #0071e3;
+            border-radius: 0.25rem;
+        }
+
+        .color-btn,
+        .fit-btn {
+            border: 1px solid #dee2e6;
+            position: relative;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/29cd5965f3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section class="apple-nav d-flex justify-content-center align-items-center bg-dark">
+        <ul class="nav-bar list-unstyled d-flex m-0">
+            <!-- <li><a class="btn btn-dark product" href="#iphone13">{{iPhone87}}</a></li>
+            <li><a class="btn btn-dark product" href="#iphone13">{{iPhone87}}</a></li>
+            <li><a class="btn btn-dark product" href="#iphone13">{{iPhone87}}</a></li> -->
+        </ul>
+    </section>
+    <section class="apple-info container d-flex justify-content-between align-items-center py-2">
+        <h3 class="m-0 product-type">{{iPhone87}}</h3>
+        <strong class="m-0 price-top">{{$9,999}}</strong>
+    </section>
+    <section class="container py-3">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <div class="img-box px-4 py-5">
+                    <img class="product-img w-100" src="" alt="">
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <h1>
+                    <strong class="product-name">{{iPhone87}}</strong>
+                </h1>
+                <div class="accordion" id="accordionPanelsStayOpenExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-color" aria-expanded="true"
+                                aria-controls="panelsStayOpen-color">
+                                {{外觀}}
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-color" class="accordion-collapse collapse show"
+                            aria-labelledby="panelsStayOpen-headingOne">
+                            <div class="accordion-body">
+                                <h5><strong>外觀</strong></h5>
+                                <div class="row color-area">
+                                    <!-- <div class="col-6 mb-3">
+                                        <button class="btn color-btn w-100">
+                                            <div
+                                                class="py-4 d-flex flex-column justify-content-center align-items-center">
+                                                <i class="fas fa-circle"></i>
+                                                <span class="color-name">{{黑色}}</span>
+                                            </div>
+                                        </button>
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <button class="btn color-btn w-100">
+                                            <div
+                                                class="py-4 d-flex flex-column justify-content-center align-items-center">
+                                                <i class="fas fa-circle"></i>
+                                                <span class="color-name">{{黑色}}</span>
+                                            </div>
+                                        </button>
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <button class="btn color-btn w-100">
+                                            <div
+                                                class="py-4 d-flex flex-column justify-content-center align-items-center">
+                                                <i class="fas fa-circle"></i>
+                                                <span class="color-name">{{黑色}}</span>
+                                            </div>
+                                        </button>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-spec" aria-expanded="true"
+                                aria-controls="panelsStayOpen-spec">
+                                {{儲存裝置}}
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-spec" class="accordion-collapse collapse show"
+                            aria-labelledby="panelsStayOpen-headingOne">
+                            <div class="accordion-body">
+                                <h5><strong>{{儲存裝置}}</strong></h5>
+                                <div class="row">
+                                    <div class="col-6 mb-3">
+                                        <button class="btn w-100">
+                                            <div
+                                                class="py-4 d-flex flex-column justify-content-center align-items-center">
+                                                <p class="spec-val">{{64GB}}</p>
+                                                <span class="fit">{{$20400起}}</span>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+
+    <script>
+        //宣告
+        const productList = [
+            {
+                name: 'iPhone 13',
+                price: 22900,
+                mainImg: 'https://picsum.photos/id/684/600/400',
+                colorList: [
+                    { name: '紅色', color: '#ff0000', img: 'https://picsum.photos/id/300/600/400' },
+                    { name: '綠色', color: '#00ff00', img: 'https://picsum.photos/id/400/600/400' },
+                    { name: '藍色', color: '#0000ff', img: 'https://picsum.photos/id/500/600/400' },
+                ],
+                spec: [
+                    {
+                        name: '容量',
+                        specDetail: [
+                            {
+                                name: '128GB',
+                                fit: 0
+                            },
+                            {
+                                name: '256GB',
+                                fit: 3500
+                            },
+                            {
+                                name: '512GB',
+                                fit: 10500
+                            }
+                        ]
+                    },
+                    {
+                        name: '連線能力',
+                        specDetail: [
+                            {
+                                name: 'WI-FI',
+                                fit: 0
+                            },
+                            {
+                                name: 'WI-FI + 行動網路',
+                                fit: 5000
+                            },
+                        ]
+                    }
+                ]
+            }
+        ]
+
+
+        //Dom
+        const navbar = document.querySelector('.nav-bar')
+        const productType = document.querySelector('.product-type')
+        const priceTop = document.querySelector('.price-top')
+        const productName = document.querySelector('.product-name')
+        const productImg = document.querySelector('.product-img')
+
+        const colorAreaBtn = document.querySelector('[aria-controls="panelsStayOpen-color"]')
+        const colorArea = document.querySelector('.color-area')
+
+        const accordionBox = document.querySelector('.accordion')
+
+        //window.onload
+        window.onclick = function () {
+            showNavbar()
+            // selectProduct(productList[0])
+        }
+
+        //function
+        function showNavbar() {
+            const list = productList.map(p => p.name)
+            list.forEach((p, index) => {
+                const li = document.createElement('li')
+                const a = document.createElement('a')
+                a.innerText = p
+                a.href = `#${p}`
+                a.classList.add('btn', 'btn-dark', 'product')
+                a.onclick = function () {
+                    selectProduct(productList[index])
+
+                }
+
+                li.appendChild(a)
+                navbar.appendChild(li)
+            })
+        }
+
+        function selectProduct(product) {
+            productType.innerText = product.name
+            productName.innerText = product.name
+            productImg.src = product.mainImg
+            priceTop.innerText = `$${product.price}`
+
+            //顏色選擇
+            product.colorList.forEach(item => {
+                const div = document.createElement('div')
+                div.classList.add('col-6', 'mb-3')
+                const btn = document.createElement('button')
+                btn.classList.add('btn', 'color-btn', 'w-100')
+                btn.onclick = function () {
+                    productImg.src = item.img
+
+                    colorAreaBtn.innerText = item.name
+                    colorAreaBtn.click()
+                }
+
+                const btnDiv = document.createElement('div')
+                btnDiv.classList.add('py-4', 'd-flex', 'flex-column', 'justify-content-center', 'align-item-center')
+
+                const i = document.createElement('i')
+                i.classList.add('fas', 'fa-circle')
+                i.style.color = item.color
+                const span = document.createElement('span')
+                span.classList.add('color-name')
+                span.innerText = item.name
+
+                btnDiv.appendChild(i)
+                btnDiv.appendChild(span)
+                btn.appendChild(btnDiv)
+                div.appendChild(btn)
+                colorArea.appendChild(div)
+
+            })
+
+            //spec
+            product.spec.forEach(item => {
+                const accordionItem = document.createElement('div')
+                accordionItem.classList.add('accordion-item')
+                const accordionTitle = document.createElement('h2')
+                accordionItem.classList.add('accordion-header')
+                const accordionBtn = document.createElement('button')
+                accordionBtn.innerText = item.name
+                accordionBtn.classList.add('accordion-button')
+                accordionBtn.setAttribute('type', 'button')
+                accordionBtn.setAttribute('data-bs-toggle', 'collapse')
+                accordionBtn.setAttribute('data-bs-target', `#panelsStayOpen-${item.name}`)
+                accordionBtn.setAttribute('aria-expanded', 'true')
+                accordionBtn.setAttribute('aria-controls', `panelsStayOpen-${item - name}`)
+
+                accordionTitle.appendChild(accordionBtn)
+
+                const accordionContent = document.createElement('div')
+                accordionContent.setAttribute('id', `panelsStayOpen-${item.name}`)
+                accordionContent.classList.add('accordion-collapse', 'collapse', 'show')
+                const accordionBody = document.createElement('div')
+                accordionBody.classList.add('accordion-body')
+                const h5 = document.createAttribute('h5')
+                const strong = document.createElement('strong')
+                strong.innerText = item.name
+                h5.appendChild(strong)
+
+                const specDiv = document.createAttribute('div')
+                specDiv.classList.add('row')
+                item.specDetail.forEach(specItem => {
+                    const div = document.createElement('div')
+                    div.classList.add('col-6', 'mb-3')
+                    const btn = document.createElement('button')
+                    btn.classList.add('btn', 'fit-btn', 'w-100')
+                    btn.setAttribute('fit', specItem.fit)
+                    btn.setAttribute('selected', 'false')
+                    btn.onclick = function () {
+                        specDiv.querySelectorAll('.btn').forEach(b => {
+                            b.setAttribute('selected', 'false')
+                        })
+                        btn.setAttribute('selected', 'true')
+                        showPrice(product)
+
+                        accordionBtn.innerText = specItem.name
+                        accordionBtn.click()
+                    }
+
+                    const btnDiv = document.createElement('div')
+                    btnDiv.classList.add('py-4', 'd-flex', 'flex-column', 'justify-content-center', 'align-items-center')
+
+                    const p = document.createElement('p')
+                    p.classList.add('spec-val', 'm-0')
+                    p.innerText = specItem.name
+                    const span = document.createElement('span')
+                    span.classList.add('fit')
+                    span.innerText = `NT$${product.price + specItem.fit}`
+                    btnDiv.appendChild(p)
+                    btnDiv.appendChild(span)
+                    btn.appendChild(btnDiv)
+                    div.appendChild(btn)
+                    specDiv.appendChild(div)
+                })
+
+                accordionBody.appendChild(h5)
+                accordionBody.appendChild(specDiv)
+                accordionContent.appendChild(accordionBody)
+                accordionItem.appendChild(accordionTitle)
+                accordionItem.appendChild(accordionContent)
+                accordionBox.appendChild(accordionItem)
+
+
+            })
+        }
+
+        function showPrice(product) {
+            const selectedFits = Array.from.querySelectorAll('[fit][selected="true"]')
+            const money = selectedFits.length > 0 ? selectedFits.map(x => parseInt(x.getAttributeNode('fit').value)).reduce((a, b) => a + b) : 0
+
+            //上兩行的分解步驟
+            // let step1 = document.querySelectorAll('[fit][selected="true"]')
+            // console.log(step1)
+            // let step2 = Array.from(step1)
+            // console.log(step2)
+            // let step3 = step2.map(x => parseInt(x.getAttributeNode('fit').value))
+            // console.log(step3)
+            // let step4 = step3.reduce((a, b) => a + b)
+            // console.log(step4)
+
+            priceTop.innerText = `$${product.price + money}`
+        }
+    </script>
+</body>
+
+</html>

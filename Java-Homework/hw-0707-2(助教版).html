@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <input type="text">
+    <button>Click</button>
+
+    <!-- //助教版 -->
+    <script>
+        //宣告
+        
+
+        //DOM物件
+        const input = document.querySelector('input')
+        const btn = document.querySelector('button')
+
+        btn.onclick = function(){
+            isNaN(input.value)//這個字串是不是NaN(Not a Number)
+            input.value.includes('.')//檢查是不是有"."
+
+            //RegExp 正規表達式-檢查輸入的內容是否為4個數字
+            let numberReExp = /^[0-9]{4}$/
+            console.log(numberReExp.text(input.value))
+
+        }
+        
+
+        //window.onload
+        
+    </script>
+</body>
+
+</html>

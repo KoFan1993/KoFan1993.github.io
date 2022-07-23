@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<style>
+    .showBox {
+        border: 1px solid #aaa;
+        height: 150px;
+        width: 500px;
+        margin: 20px auto 50px;
+        /* line-height: 150px; 若裡面沒加p就用行高置中。 */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .item-group {
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 150px;
+        vertical-align: bottom;
+    }
+
+    .item-group button {
+        margin-bottom: 10px;
+    }
+
+    .button-group {
+        display: flex;
+        flex-wrap: wrap;
+        width: 120px;
+        justify-content: center;
+    }
+
+    .button-group button {
+        font-family: Arial, Helvetica, sans-serif;
+        justify-content: center;
+        align-items: center;
+        margin: 5px;
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+    }
+</style>
+</head>
+
+<body>
+
+    <div class="showBox">
+        <p></p>
+    </div>
+    <div class="item-group">
+        <button class="btn btn-primary border border-primary ">產生數字</button>
+        <input type="text" class="inputNumber">
+        <div class="button-group">
+            <button class="number n-1" name="1">1</button>
+            <button class="number n-2" name="2">2</button>
+            <button class="number n-3" name="3">3</button>
+            <button class="number n-4" name="4">4</button>
+            <button class="number n-5" name="5">5</button>
+            <button class="number n-6" name="6">6</button>
+            <button class="number n-7" name="7">7</button>
+            <button class="number n-8" name="8">8</button>
+            <button class="number n-9" name="9">9</button>
+            <button class="number delete" name="X">X</button>
+            <button class="number n-0" name="0">0</button>
+            <button class="number confirm" name="√">√</button>
+        </div>
+    </div>
+
+    <script>
+        let minNumber = 0
+        let maxNumber = 100
+        let random
+        let showNumber = document.querySelector(".showBox p")
+        showNumber.innerText = `${minNumber} ~ ${maxNumber}`
+
+        let numBtn = document.querySelectorAll('.number')
+        let btnStart = document.querySelector('.btn')
+        numBtn.forEach(item => {
+            item.disabled = true
+        })
+
+        btnStart.onclick = function (event) {
+            random = Math.floor(Math.random() * 99) + 1
+            console.log(random)
+            btnStart.disabled = true
+
+            numBtn.forEach(item => {
+                item.disabled = false
+            })
+        }
+
+        let numList = document.querySelectorAll('.number:not(.delete,.confirm)')
+        numList.forEach((item, index) => {
+            item.addEventListener('click', function (event) {
+                input = document.querySelector('.inputNumber')
+                input.value += item.name
+            })
+        })
+
+        let deleteBtn = document.querySelector('.delete')
+        deleteBtn.onclick = function (event) {
+            input.value = ""
+        }
+
+        let confirm = document.querySelector('.confirm')
+        confirm.onclick = function (event) {
+            // console.log(typeof inputNumber.value)
+            checkNum()
+
+        }
+
+        let inputNumber = document.querySelector('.inputNumber')
+        function checkNum() {
+
+            if (inputNumber.value == "") {
+                alert('請輸入數字')
+            }
+            else {
+                if (inputNumber.value == 0 || inputNumber.value.length > 2) {
+                    alert('請輸入數字大於0')
+                    inputNumber.value = ""
+                    return
+                }
+                else if (inputNumber.value > random) {
+                    if (inputNumber.value > maxNumber) {
+                        alert(`請輸入數字小於${maxNumber}`)
+                        inputNumber.value = ""
+                        return
+                    }
+                    alert('殘念~請重新輸入數字!!')
+                    maxNumber = inputNumber.value
+                    showNumber.innerText = `${minNumber} ~ ${maxNumber}`
+                    inputNumber.value = ""
+                }
+                else if (inputNumber.value < random) {
+                    if (inputNumber.value < minNumber) {
+                        alert(`請輸入數字大於${minNumber}`)
+                        inputNumber.value = ""
+                        return
+                    }
+                    alert('殘念~請重新輸入數字!!')
+                    minNumber = inputNumber.value
+                    showNumber.innerText = `${minNumber} ~ ${maxNumber}`
+                    inputNumber.value = ""
+                }
+                else {
+                    alert('恭喜猜中了')
+                    reset()
+                }
+                inputNumber.value = ""
+            }
+
+        }
+
+        function reset() {
+            inputNumber.value = ""
+            random = ''
+            btnStart.disabled = false
+            minNumber = 0
+            maxNumber = 100
+            showNumber.innerText = `${minNumber} ~ ${maxNumber}`
+        }
+
+    </script>
+
+</body>
+
+</html>

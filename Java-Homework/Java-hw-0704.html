@@ -137,7 +137,8 @@
             //3.Tbody
 
             let theadTR = document.createElement('tr')
-            Object.values(marketingShare.Titles).forEach(item => {
+            Object.values(marketingShare)
+            marketingShare.Titles.forEach(item => {
                 console.log(item)
                 let th = document.createElement('th')
                 th.innerText = item
